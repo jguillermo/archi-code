@@ -1,4 +1,4 @@
-import { EventBase } from '../event';
+import { EventBase } from '@archi-code/event';
 
 export abstract class AggregateRoot {
   private domainEvents: EventBase[] = [];

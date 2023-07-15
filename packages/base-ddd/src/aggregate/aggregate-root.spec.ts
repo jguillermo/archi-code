@@ -1,5 +1,5 @@
 import { AggregateRoot } from './';
-import { EventBase } from '../event';
+import { EventBase } from '@archi-code/event';
 
 class TestEventBase extends EventBase {
   eventName(): string {

@@ -1,7 +1,8 @@
 import { IdTypeImp } from '../type';
 import { AggregateRoot } from '../aggregate';
-import { aggregateToEvent, EventBase } from './event-base';
+import { aggregateToEvent } from './event-base';
 import { instanceToPrimitives } from '../primitives/transform/to/transform-to-primitives';
+import { EventBase } from '@archi-code/event';
 
 class TestEventBase extends EventBase {
   aggregateId: string;
@@ -18,6 +19,7 @@ export class AggregateObjectMotherId extends AggregateRoot {
     super();
     this.aggregateId = new IdTypeImp(aggregateId);
   }
+
   sendEvent(): void {
     this.record(aggregateToEvent(TestEventBase, instanceToPrimitives(this)));
   }
