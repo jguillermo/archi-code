@@ -1,5 +1,6 @@
-import { PrimitiveAggregate, PrimitiveTypes } from '../../types/primitive-aggregate';
+import { PrimitiveAggregate } from '../../types/primitive-aggregate';
 import { AggregateRoot } from '@archi-code/aggregate';
+import { PrimitiveTypes } from '@archi-code/common';
 
 export interface PropertieToPrimitive<T extends AggregateRoot> {
   toPrimitives(): PrimitiveAggregate<T>;

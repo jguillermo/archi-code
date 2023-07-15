@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-types */
+import { PrimitiveTypes } from '@archi-code/common';
+
 type Methods<T> = {
   [P in keyof T]: T[P] extends Function ? P : never;
 }[keyof T];
@@ -6,8 +8,6 @@ type Methods<T> = {
 type MethodsAndProperties<T> = { [key in keyof T]: T[key] };
 
 type Properties<T> = Omit<MethodsAndProperties<T>, Methods<T>>;
-
-export type PrimitiveTypes = string | number | boolean | Date | undefined | null;
 
 export type ValueObjectValue<T> = T extends PrimitiveTypes
   ? T
