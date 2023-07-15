@@ -201,7 +201,6 @@ export class AggregateObjectMotherNull extends AggregateRoot {
 }
 
 export class AggregateObjectMotherNotInstance extends AggregateRoot {
-
   readonly aggregateId: IdTypeImp;
 
   readonly aggregateString: StringTypeImp;

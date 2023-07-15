@@ -1,13 +1,18 @@
-import { PrimitiveAggregate } from '../../types/primitive-aggregate';
+import { PrimitiveAggregate, PrimitiveTypes } from '../../types/primitive-aggregate';
 import { AggregateRoot } from '../../../aggregate';
 
 export interface PropertieToPrimitive<T extends AggregateRoot> {
   toPrimitives(): PrimitiveAggregate<T>;
 }
 
+type PropertiesKeys = {
+  [key: string]: PrimitiveTypes;
+};
+
 export function instanceToPrimitives<T extends AggregateRoot>(aggregate: T): PrimitiveAggregate<T> {
-  const properties = {};
-  getAllPropertiesFromInstanceClass(aggregate).forEach((property) => {
+  const properties: PropertiesKeys = {};
+  getAllPropertiesFromInstanceClass(aggregate).forEach((property: string) => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     properties[property] = aggregate[property].value;
   });

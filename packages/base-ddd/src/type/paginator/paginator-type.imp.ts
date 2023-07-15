@@ -49,7 +49,7 @@ export class PaginatorTypeImp implements ValidatorInterface {
   }
 
   validatorMessage(): string {
-    let message='';
+    let message = '';
     if (this.isEmpty()) {
       message = 'is required.';
     } else {

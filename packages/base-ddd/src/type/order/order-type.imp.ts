@@ -54,7 +54,7 @@ export class OrderTypeImp implements ValidatorInterface {
   }
 
   validatorMessage(): string {
-    let message='';
+    let message = '';
     if (this.isEmpty()) {
       message = 'is required.';
     } else {

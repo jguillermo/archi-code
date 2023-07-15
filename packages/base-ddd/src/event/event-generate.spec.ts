@@ -30,6 +30,7 @@ describe('TestEventBase', () => {
     course.sendEvent();
     const events = course.pullDomainEvents();
     expect(events[0].eventName()).toEqual('event.name.test');
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     expect(events[0]['aggregateId']).toEqual('de76374c-c08a-4bf3-8c64-649a22cddc90');
   });

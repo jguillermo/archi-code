@@ -30,8 +30,7 @@ export class DomainValidator implements ValidatorConstraintInterface {
       const vo = DomainValidator.factoryType(args.value, args.constraints[0]);
       vo.isValid();
       return `${args.property}: ${vo.validatorMessage()}`;
-    } catch (e) {
-      // @ts-ignore
+    } catch (e: any) {
       return `${args.property}: ${e.message}`;
     }
   }
