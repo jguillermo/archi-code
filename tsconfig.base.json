@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "archi-code/base-ddd": ["packages/archi-code/base-ddd/src/index.ts"]
+      "base-ddd": ["packages/base-ddd/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
