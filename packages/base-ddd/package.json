@@ -11,6 +11,7 @@
     "uuid": "^9.0.0",
     "@archi-code/aggregate": "*",
     "@archi-code/common": "*",
-    "@archi-code/type": "*"
+    "@archi-code/type": "*",
+    "@archi-code/primitive": "*"
   }
 }

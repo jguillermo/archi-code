@@ -1,0 +1,9 @@
+{
+  "name": "@archi-code/primitive",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "dependencies": {
+    "@archi-code/type": "*",
+    "@archi-code/common": "*"
+  }
+}

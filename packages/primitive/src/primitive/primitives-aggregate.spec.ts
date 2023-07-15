@@ -1,6 +1,6 @@
 import { PrimitiveAggregate } from './primitive-aggregate';
 import { expectTypeOf } from 'expect-type';
-import { AggregateEnumValues, AggregateObjectMother } from '../../object-mother.spec';
+import { AggregateEnumValues, AggregateObjectMother } from '../object-mother.spec';
 
 describe('Primitives', () => {
   it('should ensure to only return primitive properties excluding methods', () => {
