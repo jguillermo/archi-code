@@ -16,6 +16,7 @@
     "strictPropertyInitialization": false,
     "baseUrl": ".",
     "paths": {
+      "@archi-code/aggregate": ["packages/aggregate/src/index.ts"],
       "@archi-code/repository": ["packages/repository/src/index.ts"],
       "base-ddd": ["packages/base-ddd/src/index.ts"]
     }

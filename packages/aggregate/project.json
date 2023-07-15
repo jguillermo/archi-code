@@ -1,35 +1,35 @@
 {
-  "name": "repository",
+  "name": "aggregate",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/repository/src",
+  "sourceRoot": "packages/aggregate/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/packages/repository",
-        "main": "packages/repository/src/index.ts",
-        "tsConfig": "packages/repository/tsconfig.lib.json",
-        "assets": ["packages/repository/*.md"]
+        "outputPath": "dist/packages/aggregate",
+        "main": "packages/aggregate/src/index.ts",
+        "tsConfig": "packages/aggregate/tsconfig.lib.json",
+        "assets": ["packages/aggregate/*.md"]
       }
     },
     "publish": {
-      "command": "node tools/scripts/publish.mjs repository {args.ver} {args.tag}",
+      "command": "node tools/scripts/publish.mjs aggregate {args.ver} {args.tag}",
       "dependsOn": ["build"]
     },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/repository/**/*.ts"]
+        "lintFilePatterns": ["packages/aggregate/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "packages/repository/jest.config.ts",
+        "jestConfig": "packages/aggregate/jest.config.ts",
         "passWithNoTests": true,
         "codeCoverage": true
       },
