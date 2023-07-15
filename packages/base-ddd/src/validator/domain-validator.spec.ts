@@ -3,8 +3,7 @@ import { StringType } from '../type';
 import { ValidatorInterface, DomainValidator } from './';
 
 class PropertieValidateTest extends StringType {
-  // @ts-ignore
-  isValid(): boolean {
+  override isValid(): boolean {
     if (this.isNull) {
       throw new Error('not null');
     }
@@ -20,7 +19,6 @@ class PropertieValidateTest extends StringType {
 
 class EntityValidateTest {
   @Validate(DomainValidator, [PropertieValidateTest])
-      // @ts-ignore
   id: string;
 }
 
@@ -41,15 +39,12 @@ export class CompanyAddress implements ValidatorInterface {
 }
 
 class CompanyAddressCreateInput {
-  // @ts-ignore
   street: string;
-  // @ts-ignore
   number: string;
 }
 
 export class CompanyPersistDto {
   @Validate(DomainValidator, [CompanyAddress])
-      // @ts-ignore
   address: CompanyAddressCreateInput;
 }
 
@@ -59,14 +54,18 @@ describe('validate DomainValidator PropertieValidateTest', () => {
       const object = new EntityValidateTest();
       const errors = await validate(object);
       expect(errors.length).toEqual(1);
-      expect(errors[0].constraints).toEqual({ domainValidator: 'id: not null' });
+      expect(errors[0].constraints).toEqual({
+        domainValidator: 'id: not null',
+      });
     });
     it('invalid value 123', async () => {
       const object = new EntityValidateTest();
       object.id = '123';
       const errors = await validate(object);
       expect(errors.length).toEqual(1);
-      expect(errors[0].constraints).toEqual({ domainValidator: 'id: not value 123' });
+      expect(errors[0].constraints).toEqual({
+        domainValidator: 'id: not value 123',
+      });
     });
     it('valid value', async () => {
       const object = new EntityValidateTest();
@@ -79,7 +78,9 @@ describe('validate DomainValidator PropertieValidateTest', () => {
       object.id = '789';
       const errors = await validate(object);
       expect(errors.length).toEqual(1);
-      expect(errors[0].constraints).toEqual({ domainValidator: 'id: value (789) is not valid.' });
+      expect(errors[0].constraints).toEqual({
+        domainValidator: 'id: value (789) is not valid.',
+      });
     });
   });
   describe('class embebed', () => {

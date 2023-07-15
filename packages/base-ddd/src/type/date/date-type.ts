@@ -24,11 +24,10 @@ export abstract class DateType extends AbstractType<ValueTypeNullable<Date>> {
   }
 
   get toString(): string {
-    if (this.isNull) {
+    if (this.value === null) {
       return '';
     }
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
     return this.value.toISOString();
   }
 }

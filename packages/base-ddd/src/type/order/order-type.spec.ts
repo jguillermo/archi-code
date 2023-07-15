@@ -9,7 +9,6 @@ class OrderDao {
 
 class EntityValidateTest {
   @Validate(DomainValidator, [OrderTypeImp])
-      // @ts-ignore
   order: OrderDao;
 }
 
@@ -28,7 +27,9 @@ describe('Paginator validator', () => {
     object.order = order;
     const errors = await validate(object);
     expect(errors.length).toEqual(1);
-    expect(errors[0].constraints).toEqual({ domainValidator: 'order: field is required.' });
+    expect(errors[0].constraints).toEqual({
+      domainValidator: 'order: field is required.',
+    });
   });
   it('direction empty', async () => {
     const object = new EntityValidateTest();
@@ -38,7 +39,9 @@ describe('Paginator validator', () => {
     object.order = order;
     const errors = await validate(object);
     expect(errors.length).toEqual(1);
-    expect(errors[0].constraints).toEqual({ domainValidator: 'order: direction is required.' });
+    expect(errors[0].constraints).toEqual({
+      domainValidator: 'order: direction is required.',
+    });
   });
 
   it('direction error', async () => {
@@ -49,7 +52,9 @@ describe('Paginator validator', () => {
     object.order = order;
     const errors = await validate(object);
     expect(errors.length).toEqual(1);
-    expect(errors[0].constraints).toEqual({ domainValidator: 'order: direction is not valid value.' });
+    expect(errors[0].constraints).toEqual({
+      domainValidator: 'order: direction is not valid value.',
+    });
   });
 
   it('direction asc', async () => {
@@ -76,7 +81,9 @@ describe('Paginator validator', () => {
     const object = new EntityValidateTest();
     const errors = await validate(object);
     expect(errors.length).toEqual(1);
-    expect(errors[0].constraints).toEqual({ domainValidator: 'order: is required.' });
+    expect(errors[0].constraints).toEqual({
+      domainValidator: 'order: is required.',
+    });
   });
 });
 

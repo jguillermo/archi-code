@@ -10,7 +10,6 @@ class PaginatorDao {
 
 class EntityValidateTest {
   @Validate(DomainValidator, [PaginatorTypeImp])
-  // @ts-ignore
   paginator: PaginatorDao;
 }
 
@@ -32,7 +31,9 @@ describe('Paginator validator', () => {
     object.paginator = paginator;
     const errors = await validate(object);
     expect(errors.length).toEqual(1);
-    expect(errors[0].constraints).toEqual({ domainValidator: 'paginator: page must be positive.' });
+    expect(errors[0].constraints).toEqual({
+      domainValidator: 'paginator: page must be positive.',
+    });
   });
   it('perPage 0', async () => {
     const object = new EntityValidateTest();
@@ -42,14 +43,18 @@ describe('Paginator validator', () => {
     object.paginator = paginator;
     const errors = await validate(object);
     expect(errors.length).toEqual(1);
-    expect(errors[0].constraints).toEqual({ domainValidator: 'paginator: perPage must be positive.' });
+    expect(errors[0].constraints).toEqual({
+      domainValidator: 'paginator: perPage must be positive.',
+    });
   });
 
   it('null parameters', async () => {
     const object = new EntityValidateTest();
     const errors = await validate(object);
     expect(errors.length).toEqual(1);
-    expect(errors[0].constraints).toEqual({ domainValidator: 'paginator: is required.' });
+    expect(errors[0].constraints).toEqual({
+      domainValidator: 'paginator: is required.',
+    });
   });
 
   it('float number, should be int', async () => {

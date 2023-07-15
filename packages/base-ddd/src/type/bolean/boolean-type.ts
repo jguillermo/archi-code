@@ -27,8 +27,7 @@ export abstract class BooleanType<TT extends BooleanTypes = ValueTypeNullable<bo
 }
 
 export abstract class BooleanRequiredType extends BooleanType<boolean> {
-  // @ts-ignore
-  protected filter(value: any): boolean {
+  protected override filter(value: any): boolean {
     if (value === null) {
       throw new Error(`is required.`);
     }

@@ -17,45 +17,63 @@ import { getAllPropertiesFromInstanceClass, instanceToPrimitives } from './trans
 describe('Primitives to primitive', () => {
   it('Id', () => {
     const aggregate = new AggregateObjectMotherId();
-    expect(instanceToPrimitives(aggregate)).toEqual({ aggregateId: aggregate.aggregateId.value });
+    expect(instanceToPrimitives(aggregate)).toEqual({
+      aggregateId: aggregate.aggregateId.value,
+    });
   });
 
   it('String', () => {
     const aggregate = new AggregateObjectMotherString();
-    expect(instanceToPrimitives(aggregate)).toEqual({ aggregateString: aggregate.aggregateString.value });
+    expect(instanceToPrimitives(aggregate)).toEqual({
+      aggregateString: aggregate.aggregateString.value,
+    });
   });
 
   it('Boolean', () => {
     const aggregate = new AggregateObjectMotherBoolean();
-    expect(instanceToPrimitives(aggregate)).toEqual({ aggregateBoolean: aggregate.aggregateBoolean.value });
+    expect(instanceToPrimitives(aggregate)).toEqual({
+      aggregateBoolean: aggregate.aggregateBoolean.value,
+    });
   });
 
   it('Date', () => {
     const aggregate = new AggregateObjectMotherDate();
-    expect(instanceToPrimitives(aggregate)).toEqual({ aggregateDate: aggregate.aggregateDate.value });
+    expect(instanceToPrimitives(aggregate)).toEqual({
+      aggregateDate: aggregate.aggregateDate.value,
+    });
   });
 
   it('Number', () => {
     const aggregate = new AggregateObjectMotherNumber();
-    expect(instanceToPrimitives(aggregate)).toEqual({ aggregateNumber: aggregate.aggregateNumber.value });
+    expect(instanceToPrimitives(aggregate)).toEqual({
+      aggregateNumber: aggregate.aggregateNumber.value,
+    });
   });
 
   it('Uuid', () => {
     const aggregate = new AggregateObjectMotherUuid();
-    expect(instanceToPrimitives(aggregate)).toEqual({ aggregateUuid: aggregate.aggregateUuid.value });
+    expect(instanceToPrimitives(aggregate)).toEqual({
+      aggregateUuid: aggregate.aggregateUuid.value,
+    });
   });
 
   it('Enum', () => {
     const aggregate = new AggregateObjectMotherEnum();
-    expect(instanceToPrimitives(aggregate)).toEqual({ aggregateEnum: aggregate.aggregateEnum.value });
+    expect(instanceToPrimitives(aggregate)).toEqual({
+      aggregateEnum: aggregate.aggregateEnum.value,
+    });
   });
   it('ArrayString', () => {
     const aggregate = new AggregateObjectMotherArrayString();
-    expect(instanceToPrimitives(aggregate)).toEqual({ aggregateArrayString: aggregate.aggregateArrayString.value });
+    expect(instanceToPrimitives(aggregate)).toEqual({
+      aggregateArrayString: aggregate.aggregateArrayString.value,
+    });
   });
   it('ArrayNumber', () => {
     const aggregate = new AggregateObjectMotherArrayNumber();
-    expect(instanceToPrimitives(aggregate)).toEqual({ aggregateArrayNumber: aggregate.aggregateArrayNumber.value });
+    expect(instanceToPrimitives(aggregate)).toEqual({
+      aggregateArrayNumber: aggregate.aggregateArrayNumber.value,
+    });
   });
   it('Aggregate', () => {
     const aggregate = new AggregateObjectMother();

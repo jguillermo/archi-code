@@ -201,23 +201,23 @@ export class AggregateObjectMotherNull extends AggregateRoot {
 }
 
 export class AggregateObjectMotherNotInstance extends AggregateRoot {
-  // @ts-ignore
+
   readonly aggregateId: IdTypeImp;
-  // @ts-ignore
+
   readonly aggregateString: StringTypeImp;
-  // @ts-ignore
+
   readonly aggregateBoolean: BooleanTypeImp;
-  // @ts-ignore
+
   readonly aggregateDate: DateTypeImp;
-  // @ts-ignore
+
   readonly aggregateNumber: NumberTypeImp;
-  // @ts-ignore
+
   readonly aggregateUuid: UuidTypeImp;
-  // @ts-ignore
+
   readonly aggregateEnum: AggregateEnumObjectMother;
-  // @ts-ignore
+
   readonly aggregateArrayString: ArrayTypeString;
-  // @ts-ignore
+
   readonly aggregateArrayNumber: ArrayTypeNumber;
 
   constructor() {

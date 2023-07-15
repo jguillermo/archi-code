@@ -4,7 +4,6 @@ import { aggregateToEvent, EventBase } from './event-base';
 import { instanceToPrimitives } from '../primitives/transform/to/transform-to-primitives';
 
 class TestEventBase extends EventBase {
-  // @ts-ignore
   aggregateId: string;
 
   eventName(): string {
