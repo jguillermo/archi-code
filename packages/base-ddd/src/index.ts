@@ -1,6 +1,3 @@
-//validator
-export * from './validator';
-
 //event
 export * from './event';
 
