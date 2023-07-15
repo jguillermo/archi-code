@@ -1,0 +1,8 @@
+{
+  "name": "@archi-code/nestjs-validator",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "dependencies": {
+    "@archi-code/common": "*"
+  }
+}
