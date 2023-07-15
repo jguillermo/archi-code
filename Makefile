@@ -11,10 +11,7 @@ lint:
 	npx nx run-many --targets=lint --all
 
 lint-fix:
-	npx nx run base-ddd:lint --fix
-	npx nx run repository:lint --fix
-	npx nx run event:lint --fix
-	npx nx run aggregate:lint --fix
+	npx nx run-many --targets=lint --all --fix
 
 format:
 	npm run format

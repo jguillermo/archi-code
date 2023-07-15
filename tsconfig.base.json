@@ -23,8 +23,7 @@
       "@archi-code/primitive": ["packages/primitive/src/index.ts"],
       "@archi-code/reflection": ["packages/reflection/src/index.ts"],
       "@archi-code/repository": ["packages/repository/src/index.ts"],
-      "@archi-code/type": ["packages/type/src/index.ts"],
-      "base-ddd": ["packages/base-ddd/src/index.ts"]
+      "@archi-code/type": ["packages/type/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
