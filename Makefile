@@ -7,17 +7,20 @@ install:
 build:
 	npx nx run repository:build
 	npx nx run event:build
+	npx nx run aggregate:build
 	npx nx run base-ddd:build
 
 lint:
 	npx nx run base-ddd:lint
 	npx nx run repository:lint
 	npx nx run event:lint
+	npx nx run aggregate:lint
 
 lint-fix:
 	npx nx run base-ddd:lint --fix
 	npx nx run repository:lint --fix
 	npx nx run event:lint --fix
+	npx nx run aggregate:lint --fix
 
 format:
 	npm run format
@@ -26,9 +29,10 @@ format-fix:
 	npm run format-fix
 
 test-unit-coverage:
-	npx nx run base-ddd:test
-	npx nx run repository:test
-	npx nx run event:test
+	npx nx run base-ddd:test:ci
+	npx nx run repository:test:ci
+	npx nx run event:test:ci
+	npx nx run aggregate:test:ci
 
 run-all:
 	@make format-fix

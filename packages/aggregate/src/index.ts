@@ -1,1 +1,1 @@
-export * from './lib/aggregate';
+export * from './aggregate';

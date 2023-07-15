@@ -10,7 +10,7 @@ import {
   UuidTypeImp,
 } from './type';
 import { ArrayTypeNumber } from './type/array/array-type-number';
-import { AggregateRoot } from './aggregate';
+import { AggregateRoot } from '@archi-code/aggregate';
 
 export enum AggregateEnumValues {
   'CREATED' = 'CREATED',
