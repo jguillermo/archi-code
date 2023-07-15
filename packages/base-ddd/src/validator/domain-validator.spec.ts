@@ -1,6 +1,7 @@
 import { Validate, validate } from 'class-validator';
-import { ValidatorInterface, DomainValidator } from './';
 import { StringType } from '@archi-code/type';
+import { DomainValidator } from './domain-validator';
+import { ValidatorInterface } from '@archi-code/common';
 
 class PropertieValidateTest extends StringType {
   override isValid(): boolean {

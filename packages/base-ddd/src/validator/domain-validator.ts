@@ -1,5 +1,5 @@
 import { ValidatorConstraint, ValidatorConstraintInterface, ValidationArguments } from 'class-validator';
-import { ValidatorInterface } from './';
+import { ValidatorInterface } from '@archi-code/common';
 
 @ValidatorConstraint({ name: 'domainValidator', async: false })
 export class DomainValidator implements ValidatorConstraintInterface {
