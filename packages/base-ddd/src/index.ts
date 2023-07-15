@@ -10,5 +10,3 @@ export * from './event';
 //aggregate
 export * from './aggregate';
 
-//repository
-export * from './repository';
