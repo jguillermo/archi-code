@@ -1,8 +1,8 @@
-import { IdTypeImp } from '../type';
 import { aggregateToEvent } from './event-base';
 import { instanceToPrimitives } from '../primitives/transform/to/transform-to-primitives';
 import { EventBase } from '@archi-code/event';
 import { AggregateRoot } from '@archi-code/aggregate';
+import { IdTypeImp } from '@archi-code/type';
 
 class TestEventBase extends EventBase {
   aggregateId: string;

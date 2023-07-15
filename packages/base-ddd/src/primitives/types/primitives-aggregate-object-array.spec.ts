@@ -1,6 +1,6 @@
 import { PrimitiveAggregate } from './primitive-aggregate';
 import { expectTypeOf } from 'expect-type';
-import { ArrayType, IdType } from '../../type';
+import { ArrayType, IdType } from '@archi-code/type';
 
 export class customerId extends IdType {}
 

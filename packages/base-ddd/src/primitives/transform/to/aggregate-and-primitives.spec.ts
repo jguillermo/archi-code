@@ -1,8 +1,8 @@
-import { IdTypeImp } from '../../../type';
 import { faker } from '@faker-js/faker';
 import { instanceToPrimitives, PropertieToPrimitive } from './transform-to-primitives';
 import { PrimitiveAggregate } from '../../types/primitive-aggregate';
 import { AggregateRoot } from '@archi-code/aggregate';
+import { IdTypeImp } from '@archi-code/type';
 
 export class AggregateObjectMotherId extends AggregateRoot implements PropertieToPrimitive<AggregateObjectMotherId> {
   private readonly aggregateId: IdTypeImp;

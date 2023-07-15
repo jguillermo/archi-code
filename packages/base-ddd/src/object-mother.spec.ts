@@ -1,5 +1,6 @@
 import { faker } from '@faker-js/faker';
 import {
+  ArrayTypeNumber,
   ArrayTypeString,
   BooleanTypeImp,
   DateTypeImp,
@@ -8,8 +9,7 @@ import {
   NumberTypeImp,
   StringTypeImp,
   UuidTypeImp,
-} from './type';
-import { ArrayTypeNumber } from './type/array/array-type-number';
+} from '@archi-code/type';
 import { AggregateRoot } from '@archi-code/aggregate';
 
 export enum AggregateEnumValues {

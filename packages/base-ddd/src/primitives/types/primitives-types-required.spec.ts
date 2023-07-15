@@ -1,6 +1,6 @@
 import { ValueObjectValue } from './primitive-aggregate';
 import { expectTypeOf } from 'expect-type';
-import { BooleanRequiredTypeImp, IdTypeImp } from '../../type';
+import { BooleanRequiredTypeImp, IdTypeImp } from '@archi-code/type';
 
 describe('Primitives types required', () => {
   it('id primitive', () => {

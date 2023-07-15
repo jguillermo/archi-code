@@ -1,6 +1,6 @@
 import { Aggregate } from './aggregate';
-import { IdTypeImp, StringTypeImp } from '../type';
 import { EventBase } from '@archi-code/event';
+import { IdTypeImp, StringTypeImp } from '@archi-code/type';
 
 class TestEventBase extends EventBase {
   public readonly aggregateId: string;

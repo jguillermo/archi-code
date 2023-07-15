@@ -1,6 +1,3 @@
-//types
-export * from './type';
-
 //validator
 export * from './validator';
 

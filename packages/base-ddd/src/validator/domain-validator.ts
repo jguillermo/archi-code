@@ -1,18 +1,10 @@
 import { ValidatorConstraint, ValidatorConstraintInterface, ValidationArguments } from 'class-validator';
 import { ValidatorInterface } from './';
-import { PaginatorTypeImp, OrderTypeImp } from '../type';
 
 @ValidatorConstraint({ name: 'domainValidator', async: false })
 export class DomainValidator implements ValidatorConstraintInterface {
   private static factoryType(value: any, objClass: any): ValidatorInterface {
-    let vo: ValidatorInterface;
-    if (objClass.name === PaginatorTypeImp.name) {
-      vo = PaginatorTypeImp.create(value?.page, value?.perPage);
-    } else if (objClass.name === OrderTypeImp.name) {
-      vo = OrderTypeImp.create(value?.field, value?.direction);
-    } else {
-      vo = new objClass(value);
-    }
+    const vo: ValidatorInterface = new objClass(value);
     return vo;
   }
 
