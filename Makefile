@@ -5,16 +5,10 @@ install:
 	npm ci
 
 build:
-	npx nx run repository:build
-	npx nx run event:build
-	npx nx run aggregate:build
-	npx nx run base-ddd:build
+	npx nx run-many --targets=build --all
 
 lint:
-	npx nx run base-ddd:lint
-	npx nx run repository:lint
-	npx nx run event:lint
-	npx nx run aggregate:lint
+	npx nx run-many --targets=lint --all
 
 lint-fix:
 	npx nx run base-ddd:lint --fix
@@ -29,10 +23,7 @@ format-fix:
 	npm run format-fix
 
 test-unit-coverage:
-	npx nx run base-ddd:test:ci
-	npx nx run repository:test:ci
-	npx nx run event:test:ci
-	npx nx run aggregate:test:ci
+	npx nx run-many -t test
 
 run-all:
 	@make format-fix
