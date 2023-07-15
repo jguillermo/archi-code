@@ -1,0 +1,10 @@
+{
+  "name": "@archi-code/reflection",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "dependencies": {
+    "@archi-code/event": "*",
+    "@archi-code/aggregate": "*",
+    "@archi-code/primitive": "*"
+  }
+}
