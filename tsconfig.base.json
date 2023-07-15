@@ -20,6 +20,7 @@
       "@archi-code/common": ["packages/common/src/index.ts"],
       "@archi-code/event": ["packages/event/src/index.ts"],
       "@archi-code/repository": ["packages/repository/src/index.ts"],
+      "@archi-code/type": ["packages/type/src/index.ts"],
       "base-ddd": ["packages/base-ddd/src/index.ts"]
     }
   },
