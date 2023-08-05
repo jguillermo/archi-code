@@ -4,7 +4,7 @@
   "type": "commonjs",
   "dependencies": {
     "@archi-code/type": "*",
-    "@archi-code/aggegate": "*",
+    "@archi-code/aggregate": "*",
     "@archi-code/common": "*"
   }
 }

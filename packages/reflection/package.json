@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "type": "commonjs",
   "dependencies": {
-    "@archi-code/event": "*",
     "@archi-code/aggregate": "*",
+    "@archi-code/common": "*",
+    "@archi-code/event": "*",
     "@archi-code/primitive": "*",
     "@archi-code/type": "*",
-    "@archi-code/common": "*"
+    "class-transformer": "^0.5.1"
   }
 }

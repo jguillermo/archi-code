@@ -4,6 +4,7 @@
   "type": "commonjs",
   "dependencies": {
     "@archi-code/common": "*",
-    "@archi-code/type": "*"
+    "@archi-code/type": "*",
+    "class-validator": "^0.14.0"
   }
 }

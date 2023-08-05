@@ -1,4 +1,3 @@
-import { isArray } from 'class-validator';
 import { AbstractType, ValueTypeNullable } from '../abstract-type';
 
 export abstract class ArrayType<T> extends AbstractType<ValueTypeNullable<Array<T>>> {
@@ -10,7 +9,7 @@ export abstract class ArrayType<T> extends AbstractType<ValueTypeNullable<Array<
     if (!value) {
       return null;
     }
-    if (!isArray(value)) {
+    if (!Array.isArray(value)) {
       throw new Error(`value ${value} is not a Array.`);
     }
     value.forEach((item: any) => {
