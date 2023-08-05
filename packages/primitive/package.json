@@ -4,6 +4,7 @@
   "type": "commonjs",
   "dependencies": {
     "@archi-code/type": "*",
+    "@archi-code/aggegate": "*",
     "@archi-code/common": "*"
   }
 }

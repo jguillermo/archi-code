@@ -5,6 +5,8 @@
   "dependencies": {
     "@archi-code/event": "*",
     "@archi-code/aggregate": "*",
-    "@archi-code/primitive": "*"
+    "@archi-code/primitive": "*",
+    "@archi-code/type": "*",
+    "@archi-code/common": "*"
   }
 }
